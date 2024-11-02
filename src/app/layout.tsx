@@ -1,4 +1,5 @@
 "use client";
+import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
 import QueryClientProvider from "@/provider/QueryClientProvider";
 
@@ -16,6 +17,7 @@ export default function RootLayout({
               <header className="bg-gray-200 sticky top-0">
               </header>
               <main className="flex-grow bg-gray-100">{children}</main>
+              <Toaster />
             </div>
           </QueryClientProvider>
       </body>

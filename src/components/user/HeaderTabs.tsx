@@ -50,7 +50,7 @@ export default function HeaderTabs() {
                     <div className="flex flex-row w-full items-center whitespace-nowrap">
                         {items.map((item) => (
                             <div key={item.id} className="px-4 cursor-pointer">
-                                <div className={`border-transparent pb-1 ${selected === item.id ? 'border-b-4 border-orange' : null}`} onClick={() => setSelected(item.id)}>
+                                <div className={`border-transparent pb-1 ${selected === item.id ? 'border-b-4 border-primary' : null}`} onClick={() => setSelected(item.id)}>
                                     <p className={selected === item.id ? "text-black" : "text-gray-500"}>{item.name}</p>
                                 </div>
                             </div>
