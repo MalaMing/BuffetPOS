@@ -1,6 +1,8 @@
 'use client';
 
 import ScreenMobile from "@/components/ScreenMobile";
+import HeaderTabs from "@/components/user/HeaderTabs";
+import OrderButton from "@/components/user/OrderButton";
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
@@ -13,7 +15,9 @@ export default function Home() {
 
   return (
     <ScreenMobile>
-      {searchParams.get('accessKey')}
+      <HeaderTabs />
+      
+      <OrderButton />
     </ScreenMobile>
   );
 }
