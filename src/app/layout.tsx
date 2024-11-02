@@ -9,14 +9,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="ming">
       <body>
           <QueryClientProvider>
             <div className="flex flex-col min-h-screen">
               <header className="bg-gray-200 sticky top-0">
               </header>
-
-              <main className="flex-grow bg-gray-100 p-1">{children}</main>
+              <main className="flex-grow bg-gray-100">{children}</main>
             </div>
           </QueryClientProvider>
       </body>
