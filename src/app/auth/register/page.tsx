@@ -2,12 +2,14 @@
 
 import { useRegister } from "@/api/auth/useAuth";
 import { UserRegisterRequest } from "@/interfaces/user";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 
 export default function RegisterPage() {
 
     const register = useRegister();
     const { register: registerForm, handleSubmit, watch, formState: { errors } } = useForm();
+    const router = useRouter();
     
     const onSubmit = (data: any) => {
         console.log(data);
@@ -65,6 +67,9 @@ export default function RegisterPage() {
                 />
                 <button className="btn btn-primary" type="submit">Register</button>
             </form>
+            <div>Already have an account? <span className="text-primary hover:cursor-pointer" onClick={() => router.push(
+                "/auth/login"
+            )}>login</span> here</div>
         </div>
     );
 }
