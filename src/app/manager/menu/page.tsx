@@ -1,6 +1,17 @@
+'use client';
+
+import { AddMenuDialog } from "@/components/manager/addMenuDialog";
 import MenuCard from "@/components/manager/menuCard";
+import { useState } from "react";
 
 export default function MenuPage() {
+
+    const [ openDialog, setOpenDialog ] = useState(false);
+
+    const addMenuHandler = () => {
+        setOpenDialog(true);
+    }
+
     return (
         <div className="w-full flex flex-col gap-10">
             <div className="flex flex-row justify-between">
@@ -17,7 +28,7 @@ export default function MenuPage() {
                         clipRule="evenodd" />
                     </svg>
                 </label>
-                <div className="btn btn-success text-white font-bold text-lg">+ Add Menu</div>
+                <div className="btn btn-success text-white font-bold text-lg" onClick={() => addMenuHandler()}>+ Add Menu</div>
             </div>
             <div className="grid grid-cols-3 gap-10">
                 {
@@ -26,6 +37,7 @@ export default function MenuPage() {
                     ))
                 }
             </div>
+            <AddMenuDialog openDialog={openDialog} setOpenDialog={setOpenDialog} />
         </div>
     )
 }
