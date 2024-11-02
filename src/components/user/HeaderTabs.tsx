@@ -33,7 +33,7 @@ export default function HeaderTabs() {
 
     return (
         <>
-            <div className="fixed flex flex-col gap-5 border py-3 bg-white pl-3 max-w-lg">
+            <div className="fixed flex flex-col gap-5 border py-3 bg-white pl-3 lg:max-w-lg max-w-[100%]">
                 {/* <div className="flex flex-col items-end px-2">
                 <Icon icon="ic:baseline-history" fontSize={35} color='#6b7280' />
             </div> */}
