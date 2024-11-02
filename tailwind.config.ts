@@ -10,7 +10,15 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
-  			whereWhite: '#f6f6f6',
+			whereWhite: "#F1F1F1",
+			whereBlack: "#474747",
+			white: "#FFFFFF",
+			primary: "#FF8B13",
+			secondary: "#FFA500",
+			error: "#E8443F",
+			success: "#6FC772",
+			grey: "#BFBFBF",
+			info: "#2196F3",
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -20,14 +28,6 @@ const config: Config = {
   			popover: {
   				DEFAULT: 'hsl(var(--popover))',
   				foreground: 'hsl(var(--popover-foreground))'
-  			},
-  			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
-  			},
-  			secondary: {
-  				DEFAULT: 'hsl(var(--secondary))',
-  				foreground: 'hsl(var(--secondary-foreground))'
   			},
   			muted: {
   				DEFAULT: 'hsl(var(--muted))',

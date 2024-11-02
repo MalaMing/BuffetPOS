@@ -19,7 +19,7 @@ export function Toaster() {
     <ToastProvider>
       {toasts.map(function ({ id, title, description, action, ...props }) {
         return (
-          <Toast key={id} {...props} className="rounded-xl bg-primary">
+          <Toast key={id} {...props} className="rounded-xl bg-primary text-white">
             <div className="flex flex-row gap-4">
               <CiCircleCheck className="w-[2rem] h-[2rem]" />
 
